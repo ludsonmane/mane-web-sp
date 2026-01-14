@@ -58,7 +58,7 @@ dayjs.locale('pt-br');
 const MAX_PEOPLE_WITHOUT_CONCIERGE = 40;
 const MIN_PEOPLE = 8;
 const CONCIERGE_WPP_LINK =
-  'https://wa.me/5561982850776?text=Oi%20Concierge!%20Quero%20reservar%20para%20mais%20de%2040%20pessoas.%20Pode%20me%20ajudar%3F';
+  'https://wa.me/551194573-0969?text=Oi%20Concierge!%20Quero%20reservar%20para%20mais%20de%2040%20pessoas.%20Pode%20me%20ajudar%3F';
 
 // ====== Tipos
 type UnitOption = { id: string; name: string; slug?: string };
@@ -1478,7 +1478,7 @@ export default function ReservarMane() {
               ta="center"
               style={{ fontFamily: '"Comfortaa", system-ui, sans-serif' }}
             >
-              Águas Claras &amp; Brasília
+              São Paulo, SP
             </Text>
 
             <Card
