@@ -23,7 +23,8 @@ const dlog = (...a: any[]) =>
 // ======= MAPA unidade → Pixel ID (ajuste conforme vem do seu /units) =======
 const UNIT_PIXEL_MAP: Record<string, string> = {
   // Slugs esperados
-  '	mane-west-plaza-sp': '1262593178889667',
+  'mane-west-plaza-sp': '1262593178889667',
+  'Mané West Plaza, São Paulo' : '1262593178889667',
   
 };
 
