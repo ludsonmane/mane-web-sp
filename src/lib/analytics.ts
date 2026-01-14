@@ -23,20 +23,8 @@ const dlog = (...a: any[]) =>
 // ======= MAPA unidade → Pixel ID (ajuste conforme vem do seu /units) =======
 const UNIT_PIXEL_MAP: Record<string, string> = {
   // Slugs esperados
-  'bsb': '328827303217903',
-  'brasilia': '328827303217903',
-  'brasília': '328827303217903',
-  'arena brasilia': '328827303217903',
-  'arena brasília': '328827303217903',
-
-  'aguas-claras': '1160688802149033',
-  'águas-claras': '1160688802149033',
-  'aguas claras': '1160688802149033',
-  'águas claras': '1160688802149033',
-  'mane aguas claras': '1160688802149033',
-  'mané aguas claras': '1160688802149033',
-  'mané águas claras': '1160688802149033',
-  'mane águas claras': '1160688802149033',
+  '	mane-west-plaza-sp': '1262593178889667',
+  
 };
 
 function normalizeKey(input?: string | null) {
