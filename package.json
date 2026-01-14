@@ -1,5 +1,5 @@
 {
-  "name": "mane-web",
+  "name": "mane-web-sp",
   "private": true,
   "scripts": {
     "dev": "next dev",
