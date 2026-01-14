@@ -1,0 +1,126 @@
+/* web/src/app/globals.css */
+
+:root {
+  /* variáveis recebidas do next/font */
+  --font-alfa: 'Alfa Slab One', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-comfortaa: 'Comfortaa', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+/* texto padrão da UI */
+html, body {
+  font-family: var(--font-comfortaa);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* headings (Mantine <Title> renderiza h1..h6) */
+h1, h2, h3, h4 {
+  font-family: var(--font-alfa);
+  font-weight: 400;            /* Alfa Slab sempre 400 */
+  letter-spacing: -0.01em;     /* fica mais bonito no mobile */
+  line-height: 1.15;
+}
+
+/* opcional: garante que o Mantine não imponha weight diferente */
+.mantine-Title-root {
+  font-weight: 400 !important;
+  font-family: var(--font-alfa) !important;
+}
+
+/* evita zoom automático do iOS quando o input tem < 16px */
+@media (max-width: 600px) {
+  input,
+  select,
+  textarea,
+  /* Mantine */
+  .mantine-Input-input,
+  .mantine-NumberInput-input,
+  .mantine-PasswordInput-input,
+  .mantine-Select-input,
+  .mantine-TimeInput-input,
+  .mantine-DateInput-input,
+  .mantine-DatePickerInput-input {
+    font-size: 16px !important; /* chave para não haver zoom */
+    line-height: 1.4;
+  }
+}
+
+/* ajuda o Safari a não reescalar texto automaticamente */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ====== MOBILE FIRST – PÁGINA DE RESERVAS (escopado) ====== */
+@media (max-width: 640px) {
+  .reservas-page .mantine-Container-root {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .reservas-page {
+    --rm-field-height: 48px;
+    --rm-cta-height: 52px;
+  }
+
+  .reservas-page .mantine-TextInput-input,
+  .reservas-page .mantine-NumberInput-input,
+  .reservas-page .mantine-DatePickerInput-input {
+    height: var(--rm-field-height) !important;
+    font-size: 16px !important; /* evita zoom no iOS */
+    line-height: 1.2 !important;
+  }
+
+  .reservas-page .mantine-Button-root {
+    height: var(--rm-cta-height) !important;
+    width: 100% !important;
+  }
+
+  .reservas-page .mantine-Card-root { border-radius: 14px !important; }
+
+  .reservas-page .mantine-Grid-root { margin-left: 0 !important; margin-right: 0 !important; }
+  .reservas-page .mantine-Grid-col  { padding-left: 0 !important; padding-right: 0 !important; }
+
+  .reservas-page .mantine-Popover-dropdown {
+    width: calc(100vw - 24px) !important;
+    max-width: 420px !important;
+  }
+  .reservas-page .mantine-Popover-dropdown .mantine-SimpleGrid-root {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+  .reservas-page .mantine-Popover-dropdown .mantine-UnstyledButton-root {
+    width: 100% !important;
+    padding: 10px 12px !important;
+    border-radius: 10px !important;
+  }
+
+  .reservas-page .mantine-Progress-root { height: 10px !important; }
+  .reservas-page .mantine-Text-root { word-break: break-word; }
+  .reservas-page .mantine-Stack-root { gap: 10px; }
+}
+
+@media (max-width: 960px) {
+  .reservas-page .mantine-TextInput-input,
+  .reservas-page .mantine-NumberInput-input,
+  .reservas-page .mantine-DatePickerInput-input {
+    font-size: 16px !important;
+  }
+}
+
+/* (Opcional) tornar a área dos CTAs “sticky” no mobile.
+   Basta adicionar className="rm-sticky-cta" no Group dos botões. */
+@media (max-width: 640px) {
+  .reservas-page .rm-sticky-cta {
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    padding: 12px 0;
+    border-top: 1px solid #eee;
+    z-index: 5;
+  }
+}
